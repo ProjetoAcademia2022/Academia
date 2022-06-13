@@ -3,6 +3,7 @@ package projeto.academia.ano2022;
 import javax.swing.JOptionPane;
 
 public class Login {
+	
 	/*
 	 * 
 	 * Como não temos conhecimento de banco de dados AINDA, o cadastro tem que ser realizado sempre
@@ -90,17 +91,22 @@ public class Login {
 	private static void fazerCadastro() {
 		
 		String chaveAutenticacao;
+	
+			userUm = JOptionPane.showInputDialog(null, "Usuário:");
+			passUm = JOptionPane.showInputDialog(null, "Senha:");
+			chaveAutenticacao = JOptionPane.showInputDialog(null, "Chave de autenticação:");
+			//essa chave é importante, sem ela qualquer um pode criar um cadastro e entrar no sistema e pronto
+			//com essa chave é necessário que seja colocado uma segunda senha provida pelo gerente da área
+			//essa senha, nesse caso, estará provida no README.md e aqui no código também (no topo)
+			//mas em um caso real, apenas estará no código. Assim tornando necessário ter conhecimento da senha 
+			//provida pelo gerente, coisa que obviamente, só o gerente sabe. Permitindo no final um sistema mais 
+			//seguro, onde não será qualquer um que pode criar o cadastro. Esse cadastro terá que ser feito com o 
+			//acompanhamento do gerente. 
+			
+
+
 		
-		userUm = JOptionPane.showInputDialog(null, "Usuário:");
-		passUm = JOptionPane.showInputDialog(null, "Senha:");
-		chaveAutenticacao = JOptionPane.showInputDialog(null, "Chave de autenticação:");
-		//essa chave é importante, sem ela qualquer um pode criar um cadastro e entrar no sistema e pronto
-		//com essa chave é necessário que seja colocado uma segunda senha provida pelo gerente da área
-		//essa senha, nesse caso, estará provida no README.md e aqui no código também (no topo)
-		//mas em um caso real, apenas estará no código. Assim tornando necessário ter conhecimento da senha 
-		//provida pelo gerente, coisa que obviamente, só o gerente sabe. Permitindo no final um sistema mais 
-		//seguro, onde não será qualquer um que pode criar o cadastro. Esse cadastro terá que ser feito com o 
-		//acompanhamento do gerente. 
+
 		
 		if(chaveAutenticacao.equals(chavAuten)) { //se a chave bater com a chave correta, o cadastro será completado
 			
