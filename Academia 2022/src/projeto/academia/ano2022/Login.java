@@ -73,7 +73,11 @@ public class Login {
 		user = JOptionPane.showInputDialog(null, "Usuário:");
 		pass = JOptionPane.showInputDialog(null, "Senha:");
 		
-		if(user.equals(userUm) && pass.equals(passUm)) {
+		if(user.equals("admin") && pass.equals("admin")) {
+			
+			JOptionPane.showMessageDialog(null, "Bem vindo, " + user + "!");
+		
+		}else if(user.equals(userUm) && pass.equals(passUm)) {
 			
 			JOptionPane.showMessageDialog(null, "Bem vindo, " + user + "!");
 			//como deu certo, volta para o classe Main, login foi realizado com sucesso
